@@ -8,7 +8,7 @@ import time
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="YOLOv8 live")
     parser.add_argument(
-        "--webcame-resolution",
+        "--webcam-resolution",
         default = [1280, 720],
         nargs = 2,
         type = int
@@ -18,7 +18,7 @@ def parse_arguments() -> argparse.Namespace:
 
 def main():
     args = parse_arguments() 
-    frame_width, frame_height = args.webcame_resolution
+    frame_width, frame_height = args.webcam_resolution
     
     cap = cv2.VideoCapture(0)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, frame_width)
